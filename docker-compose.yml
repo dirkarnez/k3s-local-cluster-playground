@@ -1,0 +1,10 @@
+services:
+  master:
+    build: master
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+  worker_1:
+    build: worker
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    
