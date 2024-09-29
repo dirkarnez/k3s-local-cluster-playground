@@ -1,0 +1,26 @@
+name: docker-compose-actions-workflow
+on:
+  push:
+    # Sequence of patterns matched against refs/tags
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+      - 'c*'
+    
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+    # continue-on-error: true
+      - name: set permission and run
+        run: |
+          docker compose up --build
+          
+      # - uses: fastai/workflows/ssh@master
+      #   with:
+      #     ssh_key: ${{ secrets.SSH_KEY }}
+      #     key_file: id_ecdsa
+          
+      # - name: Setup tmate session
+      #   uses: mxschmitt/action-tmate@master
