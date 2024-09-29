@@ -3,8 +3,17 @@ services:
     build: master
     stdin_open: true # docker run -i
     tty: true        # docker run -t
+    restart: always
+    ports:
+      - "3306:3306"
+    
   worker_1:
     build: worker
     stdin_open: true # docker run -i
     tty: true        # docker run -t
-    
+    restart: always
+    depends_on:
+      - mariadb
+      - hapi
+    ports:
+      - "3306:3306"
