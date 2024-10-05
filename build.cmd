@@ -1,8 +1,5 @@
 @echo off
-@REM if not exist "dist" (
-@REM     md dist
-@REM )
-
-docker compose up --build 
-@REM && docker compose down
-pause
+%USERPROFILE%\Downloads\k3d-windows-amd64.exe cluster create --agents 3 mycluster &&^
+%USERPROFILE%\Downloads\k3d-windows-amd64.exe node ls &&^
+kubectl get nodes &&^
+kubectl get pods -A

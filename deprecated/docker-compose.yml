@@ -5,12 +5,12 @@ services:
     tty: true        # docker run -t
     restart: always
     privileged: true
-    # volumes:
-    #   -
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro 
     # ports:
-    #   - "3306:3306"
+    #   - "6443:6443"
 
-    # -- --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro 
+    # -- --volume=
     
   # worker_1:
   #   build: worker
