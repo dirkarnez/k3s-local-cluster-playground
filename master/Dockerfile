@@ -1,10 +1,10 @@
-FROM ubuntu:latest
+FROM eniocarboni/docker-ubuntu-systemd:latest
 
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get -y --no-install-recommends --allow-unauthenticated install \
-    curl \
+    wget \
     ufw
 
 #apiserver
@@ -16,5 +16,11 @@ RUN ufw allow from 10.42.0.0/16 to any
 #services
 RUN ufw allow from 10.43.0.0/16 to any
 
+WORKDIR "/home"
 
-CMD curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--node-name master --flannel-backend none --token 12345" sh -s - 
+RUN wget -O install.sh https://get.k3s.io && \
+    ls && \
+    chmod +x /home/install.sh && \
+    /home/install.sh --node-name master --flannel-backend none --token 12345
+
+CMD [ "/bin/bash" ]

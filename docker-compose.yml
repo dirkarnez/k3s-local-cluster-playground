@@ -4,8 +4,13 @@ services:
     stdin_open: true # docker run -i
     tty: true        # docker run -t
     restart: always
+    privileged: true
+    # volumes:
+    #   -
     # ports:
     #   - "3306:3306"
+
+    # -- --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro 
     
   # worker_1:
   #   build: worker
