@@ -6,7 +6,10 @@ Using [k3d](https://k3d.io/) instead of [K3s](https://k3s.io/)
 - k3s is not docker friendly
     - the official installation script uses systemd, setting systemd is troublesome in docker environment
     - the official alternative installation script requires some docker-networking tweaks
- 
+
+### Alternatives
+- [kubernetes-sigs/kind: Kubernetes IN Docker - local clusters for testing Kubernetes](https://github.com/kubernetes-sigs/kind)
+
 ### On LAN (Raspberry PIs on LAN, for example)
 - Below commands is copied from terminal (may not work in newer versions of K3S, just to demonstrate the idea)
 - server
