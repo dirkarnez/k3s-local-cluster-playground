@@ -7,8 +7,12 @@ Using [k3d](https://k3d.io/) instead of [K3s](https://k3s.io/)
     - the official installation script uses systemd, setting systemd is troublesome in docker environment
     - the official alternative installation script requires some docker-networking tweaks
 
+### Tutorials
+- [Run Kubernetes Cluster Locally with k3d and Helm | Medium](https://medium.com/@munza/local-kubernetes-with-k3d-helm-dashboard-6510d906431b)
+
 ### Alternatives
 - [kubernetes-sigs/kind: Kubernetes IN Docker - local clusters for testing Kubernetes](https://github.com/kubernetes-sigs/kind)
+    - [dirkarnez/kind-playground](https://github.com/dirkarnez/kind-playground)
 
 ### On LAN (Raspberry PIs on LAN, for example)
 - Below commands is copied from terminal (may not work in newer versions of K3S, just to demonstrate the idea)
@@ -28,3 +32,4 @@ Using [k3d](https://k3d.io/) instead of [K3s](https://k3s.io/)
       ```
       
       
+
