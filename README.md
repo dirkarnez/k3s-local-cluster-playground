@@ -7,6 +7,9 @@ Using [k3d](https://k3d.io/) instead of [K3s](https://k3s.io/)
     - the official installation script uses systemd, setting systemd is troublesome in docker environment
     - the official alternative installation script requires some docker-networking tweaks
 
+### TODOs
+- [ ] [kubernetes/dashboard: General-purpose web UI for Kubernetes clusters](https://github.com/kubernetes/dashboard)
+
 ### Tutorials
 - [Run Kubernetes Cluster Locally with k3d and Helm | Medium](https://medium.com/@munza/local-kubernetes-with-k3d-helm-dashboard-6510d906431b)
 
@@ -32,4 +35,5 @@ Using [k3d](https://k3d.io/) instead of [K3s](https://k3s.io/)
       ```
       
       
+
 
